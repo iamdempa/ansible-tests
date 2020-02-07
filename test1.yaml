@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: get username
+      shell: uname > /home/ansible-master/Desktop/results.txt
+    - name: who am i
+      shell: whoami >> /home/ansible-master/Desktop/results.txt
