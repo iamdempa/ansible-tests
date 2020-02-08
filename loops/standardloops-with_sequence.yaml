@@ -3,5 +3,5 @@
   become: yes
   tasks:
     - name: with sequence
-      debug: msg=this is loop {{ item }}
+      debug: msg="this is loop {{ item }}"
       with_sequence: start=1 end=10
