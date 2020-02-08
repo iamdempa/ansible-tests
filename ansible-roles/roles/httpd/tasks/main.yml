@@ -1,0 +1,8 @@
+---
+
+- name: install httpd
+  yum: name=httpd state=latest
+  notify: enable httpd
+
+
+
