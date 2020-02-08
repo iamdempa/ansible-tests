@@ -4,4 +4,4 @@
   tasks:
     - name: with sequence
       debug: msg=this is loop {{ item }}
-      with_sequence: start=1 end=2
+      with_sequence: start=1 end=10
