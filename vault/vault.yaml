@@ -4,7 +4,7 @@ ansible-vault create vault.yaml
 // then write the playbook
 ---
 - hosts: localhost
-  var:
+  vars:
    - ansible_sudo_pass: BANUKA123
   tasks:
    - name: install httpd
@@ -14,6 +14,14 @@ ansible-playbook vault.yaml -> will give an error ERROR! Attempting to decrypt b
 
 // for that, try this and give vault password
 ansible-playbook vault.yaml --ask-vault-pass
+
+or
+
+vi password.txt -> then enter the password
+
+chmod 400 password.txt
+
+ansible-playbook vault.yaml --vault-password-file password.txt
 
 // edit encrypted files
 ansible-vault edit vault.yaml
