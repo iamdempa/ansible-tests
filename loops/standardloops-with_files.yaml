@@ -2,8 +2,8 @@
 - hosts: all
   become: yes
   tasks:
-    - name: with loops
+    - name: show file contents
       debug: msg={{ item }}
-      with_files:
+      with_file:
         - file1.txt
         - file2.txt
