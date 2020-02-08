@@ -1,0 +1,28 @@
+ansible-vault create vault.yaml
+
+
+// then write the playbook
+---
+- hosts: localhost
+  var:
+   - ansible_sudo_pass: BANUKA123
+  tasks:
+   - name: install httpd
+     yum: name=httpd state=latest
+
+ansible-playbook vault.yaml -> will give an error ERROR! Attempting to decrypt but no vault secrets found
+
+// for that, try this and give vault password
+ansible-playbook vault.yaml --ask-vault-pass
+
+// edit encrypted files
+ansible-vault edit vault.yaml
+
+// change vault password given
+ansible-vault rekey vault.yaml
+
+// encrypting un-encrypted playbooks
+ansible-vault encrypt vault.yaml
+
+// decrypting encrypted playbook
+ansible-vault decrypt vault.yml bar.yml baz.yml
