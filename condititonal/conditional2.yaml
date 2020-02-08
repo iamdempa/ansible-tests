@@ -2,10 +2,10 @@
 - hosts: all
   become: yes
   tasks:
-    - name: install httpd
+    - name: install httpd using apt
       apt: name=httpd state=latest
       when: ansible_os_family == "Debian"
 
-    - name: install httpd
+    - name: install httpd using yum
       yum: name=httpd state=latest
       when: ansible_os_family == "RedHat"
