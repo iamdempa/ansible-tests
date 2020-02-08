@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  vars:
+    - var1: test1
+    - var2: test2
+  tasks: 
+    - name: echo variables
+      shell: echo " {{ var1 }} is variable 1 and variable2 is {{ var2 }} " > /home/ansible-master/vars.txt
