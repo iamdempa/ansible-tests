@@ -8,4 +8,4 @@
       register: results
 
     - name: module debug
-      debug: msg=" {{ results.stdout_lines }} {{ results.start }}  ""
+      debug: msg=" {{ results.stdout_lines }} {{ results.start }} "
