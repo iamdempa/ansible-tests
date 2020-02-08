@@ -1,6 +1,0 @@
----
-- hosts: all
-  become: yes
-  tasks:
-    - name: install stuff
-      yum: name=['httpd', 'git'] state=absent
