@@ -2,9 +2,9 @@
 
 - name: install httpd
   yum: name=httpd state=latest
-  notify: start-httpd
 
-  handlers:
-    - name: start-httpd
-      service: name=httpd state=started enabled=yes
+- name: enable httpd service at startup and start it
+  service: name=httpd state=started enabled=yes
+
+
 
