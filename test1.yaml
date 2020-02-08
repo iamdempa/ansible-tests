@@ -8,4 +8,7 @@
       shell: whoami >> /home/ansible-master/results.txt
 
     - name: testing raw modules
-      raw: echo "hi" >> /home/ansible-master/results.txt
+      raw: echo "hi from raw" >> /home/ansible-master/results.txt
+
+    - name: testing command module
+      command: echo "hi from command" >> /home/ansible-master/results.txt
