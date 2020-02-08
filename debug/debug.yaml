@@ -1,0 +1,7 @@
+---
+- hosts: all
+  vars:
+    - var1: "Varibale 1"
+  tasks:
+    - name: module debug
+      debug: msg="the variable var1 should be set to {{ var1 }} "
