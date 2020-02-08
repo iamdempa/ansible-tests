@@ -6,4 +6,4 @@
     - var2: test2
   tasks: 
     - name: echo variables
-      shell: echo " {{ var1 }} is variable 1 and variable2 is {{ var2 }} " > /home/ansible-master/vars.txt
+      shell: echo " {{ ansible_product_version }} is variable 1 and variable2 is {{ var2 }} " > /home/ansible-master/vars.txt
