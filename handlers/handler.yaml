@@ -8,8 +8,6 @@
 
       # handler 
       notify: start vsftpd
-    
-    - name: install 
   
   handlers: 
     - name: start vsftpd
